@@ -31,6 +31,9 @@ public class FilmTahminOyunu {
 
         System.out.println("Tahmin hakkiniz : " + (str.length() * 2) + "\n");//tahmin hakki filmin harf sayisinin iki kati kadar.
 
+        String sp[] = d.split("");
+        List<String> j = Arrays.asList(sp);
+
 
         int dogruTahmin=0;
         int yanlisTahmin=0;
@@ -48,7 +51,7 @@ public class FilmTahminOyunu {
                     dogruTahmin++;
                     tahminList.set(str.indexOf(c), c);
 
-                    str= str.replaceFirst(c, "");
+                    str= str.replaceFirst(c, " ");
 
                 }
                 System.out.println(tahminList);
@@ -71,8 +74,7 @@ public class FilmTahminOyunu {
                 break;
             }
 
-            String sp[] = d.split("");
-            List<String> j = Arrays.asList(sp);
+
 
             if(j.equals(tahminList)){
                 System.out.println("TEBRIKLER!");
