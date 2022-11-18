@@ -8,10 +8,15 @@ public class MusteriBilgileri {
 
     private String sifre;
 
-    MusteriBilgileri(String adSoyad, String kartNo, String sifre){
+    private double bakiye;
+
+    int musNo;
+
+    MusteriBilgileri(String adSoyad, String kartNo, String sifre, double bakiye){
         this.adSoyad=adSoyad;
         this.kartNo=kartNo;
         this.sifre=sifre;
+        this.bakiye=bakiye;
 
     }
 
@@ -37,5 +42,22 @@ public class MusteriBilgileri {
 
     public void setAdSoyad(String adSoyad) {
         this.adSoyad = adSoyad;
+    }
+
+    public double getBakiye() {
+        return bakiye;
+    }
+
+    public void setBakiye(double bakiye) {
+        this.bakiye = bakiye;
+    }
+
+    @Override
+    public String toString() {
+        return "MusteriBilgileri{" +
+                "adSoyad='" + adSoyad + '\'' +
+                ", kartNo='" + kartNo + '\'' +
+                ", sifre='" + sifre + '\'' +
+                '}';
     }
 }

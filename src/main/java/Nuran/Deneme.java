@@ -24,6 +24,7 @@ public class Deneme {
             String str=input.nextLine();
 
             String[] countryNames={"Usa","United States","Mexico","Canada","France","Germany"};
+
             int countryPopulation []={40000,150000,123000,45600,478300,123000};
 
             int sonuc=populationOfCountry(countryNames,countryPopulation,str);

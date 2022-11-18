@@ -6,7 +6,7 @@ import static Mehmet.Runner.musteriler;
 
 public class KartNumarasiVeSifre {
 
-    static void kartNumarasiVeSifreGir(){
+    static int kartNumarasiVeSifreGir(){
 
         System.out.println("Lutfen musteri numaranizi giriniz");
         Scanner scan = new Scanner(System.in);
@@ -35,7 +35,7 @@ public class KartNumarasiVeSifre {
                 }
             }
         }
-
+        return musNo;
 
 
 
