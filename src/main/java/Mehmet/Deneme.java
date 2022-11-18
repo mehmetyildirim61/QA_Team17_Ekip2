@@ -4,25 +4,23 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.sql.SQLOutput;
+import java.util.*;
 
 public class Deneme {
 
     public static void main(String[] args) throws IOException {
 
-        BufferedReader t = new BufferedReader(new FileReader("src/main/java/Mustafa/FilmTahmin_Task"));
+//        BufferedReader t = new BufferedReader(new FileReader("src/main/java/Mustafa/FilmTahmin_Task"));
+//
+//
+//        while (t.readLine() != null) {
+//            System.out.println(t.readLine());
+//        }
 
-
-        while (t.readLine() != null) {
-            System.out.println(t.readLine());
-        }
-
-
-
-
+//
+//
+//
 //        List<String> film = new ArrayList<>(Arrays.asList("KELEBEK", "MUCIZE", "AYLA", "DUNKIRK", "MEMENTO", "GORA", "ESKIYA",
 //                "FIGHTCLUB", "KARAKOMIK", "KILLBILL", "AMELIE", "XMEN", "OLDBOY",
 //                "BATMAN", "KELOGLAN", "TOYSTORY", "MUTLULUK", "SEVEN"));
@@ -34,7 +32,8 @@ public class Deneme {
 //        int secim = input.nextInt();
 //
 //                String sectiginfilm = film.get(secim);
-//        String d = film.get(secim);
+//        String yd = film.get(secim);
+//        String d=yd;
 //
 //        List<String> tahminList = new ArrayList<>(sectiginfilm.length());
 //
@@ -45,16 +44,30 @@ public class Deneme {
 //
 //        System.out.println("sectiginiz film icin tahmin hakkiniz : " + sectiginfilm.length() * 2);
 //
-//        int tahmin=1;
+//
 //        int tahminHakki = sectiginfilm.length() * 2;
-//        while (tahmin <= sectiginfilm.length() * 2) {
+//        while (true) {
 //            Scanner scan = new Scanner(System.in);
 //            System.out.println("film tahmininiz");
 //            String ft = scan.nextLine();
-//            if (ft.equalsIgnoreCase(sectiginfilm)) {
+//            if (ft.equalsIgnoreCase(sectiginfilm))  {
 //                System.out.println("TEBRIKLER!!");
 //                break;
 //            }
+//
+//            String sp[] = yd.split("");
+//            List<String> j = Arrays.asList(sp);
+//
+//            if(j.equals(tahminList)){
+//                System.out.println("tebrik!");
+//                break;
+//            }
+//
+//
+//
+//
+//
+//
 //            tahminHakki--;
 //
 //            System.out.println("kalan tahmin hakkiniz : " + tahminHakki);
@@ -63,21 +76,34 @@ public class Deneme {
 //            String c = input.next().substring(0, 1).toUpperCase();
 //
 //
-//            if (d.contains(c)) {
-//                tahminList.set(d.indexOf(c), c);
-//                System.out.println(tahminList);
-//                d= d.replaceFirst(c, " ");
+////            if (d.contains(c)) {
+////                while(true){
+////                    tahminList.set(d.indexOf(c), c);
+////                    System.out.println(tahminList);
+////                    d= d.replaceFirst(c, " ");
+////                }
+////
+////            }
 //
-//            }
+//
+//                while(d.contains(c)){
+//                    tahminList.set(d.indexOf(c), c);
+//
+//                    d= d.replaceFirst(c, " ");
+//
+//                }
+//            System.out.println(tahminList);
+//
 //
 //            if(tahminHakki==0){
+//                System.out.println("KAYBETTINIZ");
 //                break;
 //
 //            }
-//
-//
-//        }
-//        System.out.println("KAYBETTINIZ");
+
+
+        }
+
 
 
 
@@ -85,4 +111,4 @@ public class Deneme {
 
 
     }
-}
+//}

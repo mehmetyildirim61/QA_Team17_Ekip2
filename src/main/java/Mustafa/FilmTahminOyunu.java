@@ -31,32 +31,33 @@ public class FilmTahminOyunu {
 
         System.out.println("Tahmin hakkiniz : " + (str.length() * 2) + "\n");//tahmin hakki filmin harf sayisinin iki kati kadar.
 
-        int tahmin=1;
+
         int dogruTahmin=0;
         int yanlisTahmin=0;
 
 
         int tahminHakki = str.length() * 2;
-        while (tahmin <= str.length() * 2) {
+        while (true) {
 
             Scanner input = new Scanner(System.in);
             System.out.println("HARF LUTFEN!!");
             String c = input.next().substring(0, 1).toUpperCase();
 
+            if(str.contains(c)){
+                while(str.contains(c)){
+                    dogruTahmin++;
+                    tahminList.set(str.indexOf(c), c);
 
-            if (str.contains(c)) {
-                dogruTahmin++;
-                tahminList.set(str.indexOf(c), c);
+                    str= str.replaceFirst(c, "");
+
+                }
                 System.out.println(tahminList);
                 System.out.println("Dogru Tahmin = " + dogruTahmin);
                 System.out.println("Yanlis Tahmin = " + yanlisTahmin);
-                str= str.replaceFirst(c, " ");
-
             }else{
                 yanlisTahmin++;
                 System.out.println("Dogru Tahmin = " + dogruTahmin);
                 System.out.println("Yanlis Tahmin = " + yanlisTahmin);
-
             }
 
 
@@ -69,6 +70,16 @@ public class FilmTahminOyunu {
                 System.out.println("TEBRIKLER!!");
                 break;
             }
+
+            String sp[] = d.split("");
+            List<String> j = Arrays.asList(sp);
+
+            if(j.equals(tahminList)){
+                System.out.println("TEBRIKLER!");
+                break;
+            }
+
+
             tahminHakki--;
 
             if(tahminHakki==0){
