@@ -27,7 +27,7 @@ public class FilmTahminOyunu {
         for (int i = 0; i < str.length(); i++) {
             tahminList.add("-");
         }
-        System.out.println("Filmin Adi = " + tahminList);//tahminList = [-, -, -, -]
+        System.out.println(d.length()+    " harfli bir film  = " + tahminList);//tahminList = [-, -, -, -]
 
         System.out.println("Tahmin hakkiniz : " + (str.length() * 2) + "\n");//tahmin hakki filmin harf sayisinin iki kati kadar.
 
@@ -47,22 +47,27 @@ public class FilmTahminOyunu {
             String c = input.next().substring(0, 1).toUpperCase();
 
             if(str.contains(c)){
+                dogruTahmin++;
                 while(str.contains(c)){
-                    dogruTahmin++;
+
                     tahminList.set(str.indexOf(c), c);
-
                     str= str.replaceFirst(c, " ");
-
                 }
+
                 System.out.println(tahminList);
                 System.out.println("Dogru Tahmin = " + dogruTahmin);
-                System.out.println("Yanlis Tahmin = " + yanlisTahmin);
+                System.out.println("Yanlis Tahmin = " + yanlisTahmin+ "\n");
+
             }else{
                 yanlisTahmin++;
                 System.out.println("Dogru Tahmin = " + dogruTahmin);
-                System.out.println("Yanlis Tahmin = " + yanlisTahmin);
+                System.out.println("Yanlis Tahmin = " + yanlisTahmin+ "\n");
             }
 
+            if(j.equals(tahminList)){
+                System.out.println("TEBRIKLER!");
+                break;
+            }
 
             Scanner scan = new Scanner(System.in);
             System.out.println("Filmi tahmin et");
@@ -75,14 +80,8 @@ public class FilmTahminOyunu {
             }
 
 
-
-            if(j.equals(tahminList)){
-                System.out.println("TEBRIKLER!");
-                break;
-            }
-
-
             tahminHakki--;
+            System.out.println("kalan tahmin hakkiniz : " + tahminHakki);
 
             if(tahminHakki==0){
                 System.out.println("KAYBETTINIZ");
@@ -91,7 +90,7 @@ public class FilmTahminOyunu {
 
             }
 
-            System.out.println("kalan tahmin hakkiniz : " + tahminHakki);
+
 
 
 
