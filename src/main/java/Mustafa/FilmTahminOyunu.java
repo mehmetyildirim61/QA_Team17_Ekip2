@@ -4,18 +4,29 @@ import java.util.*;
 
 public class FilmTahminOyunu {
 
+    static         List<String> film = new ArrayList<>(Arrays.asList("KELEBEK", "MUCIZE", "AY", "DUNKIRK", "MEMENTO", "GORA", "ESKIYA",
+            "FIGHTCLUB", "KARAKOMIK", "KILLBILL", "AMELIE", "XMEN", "OLDBOY",
+            "BATMAN", "KELOGLAN", "TOYSTORY", "MUTLULUK", "SEVEN"));
+
     public static void main(String[] args) {
 
-        List<String> film = new ArrayList<>(Arrays.asList("KELEBEK", "MUCIZE", "AYLA", "DUNKIRK", "MEMENTO", "GORA", "ESKIYA",
-                "FIGHTCLUB", "KARAKOMIK", "KILLBILL", "AMELIE", "XMEN", "OLDBOY",
-                "BATMAN", "KELOGLAN", "TOYSTORY", "MUTLULUK", "SEVEN"));
+        secim();
 
+    }
 
-        Scanner input = new Scanner(System.in);
-        System.out.println("film secmek icin 0'dan 17'ye kadar bir sayi girin");
-        int secim = input.nextInt();
+    public static void secim(){
 
-        filmSec(film.get(secim));
+        while(true){
+            int r = (int)(Math.random()*18);
+            System.out.println("\nOYUN BASLIYOR!...");
+            filmSec(film.get(r));
+            System.out.println("Oyundan Cikmak icin 0'a\nDevam etmek icin herhangi bir tusa basin");
+            Scanner input = new Scanner(System.in);
+            if(input.next().equals("0")){
+                System.out.println("TEKRAR GORUSURUZ..");
+                break;
+            }
+        }
 
     }
 
@@ -37,9 +48,9 @@ public class FilmTahminOyunu {
 
         int dogruTahmin=0;
         int yanlisTahmin=0;
-
-
         int tahminHakki = str.length() * 2;
+
+
         while (true) {
 
             Scanner input = new Scanner(System.in);
@@ -48,8 +59,8 @@ public class FilmTahminOyunu {
 
             if(str.contains(c)){
                 dogruTahmin++;
-                while(str.contains(c)){
 
+                while(str.contains(c)){
                     tahminList.set(str.indexOf(c), c);
                     str= str.replaceFirst(c, " ");
                 }
@@ -68,6 +79,7 @@ public class FilmTahminOyunu {
                 System.out.println("TEBRIKLER!");
                 break;
             }
+
 
             Scanner scan = new Scanner(System.in);
             System.out.println("Filmi tahmin et");
